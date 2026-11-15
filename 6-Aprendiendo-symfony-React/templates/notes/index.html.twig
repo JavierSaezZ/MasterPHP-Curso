@@ -1,0 +1,19 @@
+{% for note in notes %}
+    <br>    
+
+        ID: {{ note.id }}
+    <br>    
+    
+        Nick: {{ note.user.nick}}
+    <br>    
+    
+           titulo: {{ note.title }}
+    <br>    
+    
+        conenido: {{ note.content }}
+    <br>    
+      Fecha: {{ note.createdAt|date('d/m/Y H:i') }}
+    
+        
+    <hr>
+{% endfor %}

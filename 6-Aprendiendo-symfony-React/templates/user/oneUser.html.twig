@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuario</title>
+</head>
+
+<body>
+
+   <main id="user-page" data-user-id="{{ app.request.attributes.get('id') }}">
+    <p>ID: <span id="user-id"></span></p>
+    <p>Email: <span id="user-email"></span></p>
+</main>
+
+    <script src="{{ asset('js/oneUser.js') }}"></script>
+
+</body>
+</html>

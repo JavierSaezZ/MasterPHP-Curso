@@ -1,0 +1,10 @@
+{
+    "require": {
+        "spipu/html2pdf": "^5.3",
+        "firephp/firephp-core": "^0.5.3",
+        "nyratas/php-console-log": "^1.1"
+    },
+    "require-dev": {
+        "kint-php/kint": "^6.0"
+    }
+}

@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Usuarios
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/user.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="users-page">
+        <header class="users-header">
+            <p class="users-header__label">Comunidad</p>
+
+            <h1>Personas registradas</h1>
+
+            <p class="users-header__description">
+                Consulta los usuarios, sus puestos, experiencia y datos principales.
+            </p>
+
+            <div class="users-toolbar">
+                <div class="users-toolbar__filters">
+                    <label for="experiencia" class="users-toolbar__label">Experiencia</label>
+
+                    <select name="select" id="experiencia" class="users-select" data-users-url="{{ path('app_users_experiencia') }}">
+                        <option value="1">Junior</option>
+                        <option value="2" selected>Mid</option>
+                        <option value="3">Senior</option>
+                    </select>
+
+                    <p id="users-status" class="users-status">Cargando usuarios...</p>
+                </div>
+
+                <button type="button" id="btnAñadir" class="button button--primary" commandfor="user-modal" command="show-modal">
+                    + Añadir usuario
+                </button>
+            </div>
+        </header>
+
+        <main id="users-grid" class="users-grid" data-users-url="{{ path('app_users') }}"></main>
+
+        <dialog id="user-modal" class="user-modal">
+            <div class="user-modal__header">
+                <div>
+                    <p class="user-modal__label">Usuario</p>
+                    <h2 id="user-modal-title">Añadir o editar usuario</h2>
+                </div>
+
+                <button type="button" class="user-modal__close" commandfor="user-modal" command="close" aria-label="Cerrar modal">
+                    &times;
+                </button>
+            </div>
+
+            <form id="user-form" class="user-form">
+                <input type="hidden" id="user-id" name="id">
+
+                <div class="form-field">
+                    <label for="nick">Nick</label>
+                    <input type="text" id="nick" name="nick" maxlength="50" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" maxlength="191" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="genero">Género</label>
+
+                    <select id="genero" name="genero">
+                        <option value="">Sin indicar</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="No binario">No binario</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" min="0" max="120">
+                </div>
+
+                <div class="form-field form-field--wide">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" id="puesto" name="puesto" maxlength="100">
+                </div>
+
+                <div class="form-field">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" maxlength="80">
+                </div>
+
+                <div class="form-field">
+                    <label for="experiencia-anios">Años de experiencia</label>
+                    <input type="number" id="experiencia-anios" name="experienciaAnios" min="0" value="0" required>
+                </div>
+
+                <div class="form-field form-field--wide">
+                    <label for="fecha-registro">Fecha de registro</label>
+                    <input type="datetime-local" id="fecha-registro" name="fechaRegistro">
+                </div>
+
+                <div class="form-checks form-field--wide">
+                    <label class="form-check">
+                        <input type="checkbox" id="activo" name="activo" checked>
+                        Usuario activo
+                    </label>
+
+                    <label class="form-check">
+                        <input type="checkbox" id="es-admin" name="esAdmin">
+                        Administrador
+                    </label>
+                </div>
+
+                <div class="user-modal__actions form-field--wide">
+                    <button type="button" class="button button--secondary" commandfor="user-modal" command="close">
+                        Cancelar
+                    </button>
+
+                    <button type="button" id="btnGuardar" class="button button--primary">
+                        Guardar usuario
+                    </button>
+                </div>
+            </form>
+        </dialog>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="module" src="{{ asset('js/User.js') }}"></script>
+{% endblock %}

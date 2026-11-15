@@ -1,0 +1,9 @@
+C:\wamp64\bin\php\php8.3.14\php.exe artisan serve
+
+npm run dev
+
+Rutas (routes/web.php): Aquí creas la URL (la puerta de entrada).
+
+Vistas (resources/views/): Aquí creas el diseño en archivos .blade.php.
+
+Estilos (resources/css/app.css): Aquí escribes el diseño visual que Vite compilará.

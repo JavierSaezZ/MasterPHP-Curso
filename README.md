@@ -60,7 +60,7 @@ Práctica de interfaz con un **listado de recetas en tarjetas** y formularios pa
 
 ![Formulario para editar una receta](Readme-capturas/react-editar-receta.png)
 
-### Symfony y React — Gestión de usuarios
+### Symfony — Gestión de usuarios
 
 Práctica de gestión de usuarios con **tarjetas informativas**, filtro por nivel de experiencia y formularios para añadir o editar los datos. La interfaz muestra campos como nombre, correo, edad, puesto, ciudad, años de experiencia, estado y rol de administrador.
 

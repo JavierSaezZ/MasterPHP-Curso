@@ -50,8 +50,6 @@ Práctica de interfaz con un **listado de recetas en tarjetas** y formularios pa
 
 ![Listado de recetas en React](Readme-capturas/react-listado-recetas.png)
 
-![Vista adicional de las tarjetas del recetario](Readme-capturas/react-listado-recetas-detalle.png)
-
 **Añadir receta**
 
 ![Formulario para añadir una receta](Readme-capturas/react-anadir-receta.png)
@@ -59,6 +57,7 @@ Práctica de interfaz con un **listado de recetas en tarjetas** y formularios pa
 **Editar receta**
 
 ![Formulario para editar una receta](Readme-capturas/react-editar-receta.png)
+![Vista adicional de las tarjetas del recetario](Readme-capturas/react-listado-recetas-detalle.png)
 
 ### Symfony — Gestión de usuarios
 

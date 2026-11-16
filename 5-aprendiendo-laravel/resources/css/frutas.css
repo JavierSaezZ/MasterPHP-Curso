@@ -1,0 +1,77 @@
+/* Ejercicio Laravel: estilo sencillo en rojo pastel */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7f8;
+    color: #443136;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contenedor-formulario { max-width: 550px; }
+
+h1 { margin: 0 0 8px; color: #a34558; }
+p { color: #756166; }
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #b95165;
+    border-radius: 6px;
+    background: #bd6174;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.boton:hover { background: #a84a5e; }
+.boton-claro { background: #ffe4e9; color: #8e3448; border-color: #eac2cb; }
+.boton-claro:hover { background: #fbd3dc; }
+.boton-borrar { background: #fff1f3; color: #a73d50; border-color: #ecc9d0; }
+.boton-borrar:hover { background: #f9dce2; }
+
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 12px; text-align: left; border: 1px solid #f0d7dd; }
+th { background: #f7d6de; color: #7c3544; }
+tr:nth-child(even) { background: #fffafb; }
+.acciones { white-space: nowrap; }
+.acciones form { display: inline; }
+.acciones .boton { padding: 6px 10px; margin-right: 4px; }
+
+.formulario { background: #fff; border: 1px solid #f0d7dd; border-radius: 8px; padding: 22px; }
+.formulario label { display: block; margin: 12px 0 6px; font-weight: bold; }
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #e2bec7;
+    border-radius: 5px;
+    background: #fffdfd;
+}
+.formulario input:focus, .formulario textarea:focus { outline: 2px solid #f3b6c3; }
+.botones { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.mensaje, .errores { padding: 10px; border-radius: 6px; background: #ffe6ec; color: #88394d; }
+.errores p { margin: 5px 0; }
+
+@media (max-width: 600px) {
+    .cabecera { align-items: flex-start; flex-direction: column; }
+    .contenedor { margin: 24px auto; }
+}

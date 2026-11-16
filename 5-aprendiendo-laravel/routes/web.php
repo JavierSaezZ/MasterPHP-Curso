@@ -111,3 +111,12 @@ Route::get('detail/{id}', [FrutaController::class, 'detail'])->name('frutas.deta
 // // ));
 // //  }
 // // });
+
+
+
+Route::get('/css/frutas.css', function () {
+    return response()->file(
+        resource_path('css/frutas.css'),
+        ['Content-Type' => 'text/css']
+    );
+})->name('frutas.css');
